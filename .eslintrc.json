@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "@rocketseat/eslint-config/next", 
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "react/display-name": "off",
+    "prefer-regex-literals": "off",
+    "no-useless-escape": "off",
+    "no-labels": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "no-empty-interface": "off",
+    "ban-types": "off",
+    "no-empty-function": "off"
+  }
 }
