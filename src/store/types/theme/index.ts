@@ -1,6 +1,6 @@
-export type Theme = 'dark' | 'white'
+import { Theme } from '@/@types'
 
 export interface ThemeState {
-    theme: Theme
-    setThemetate: (theme: Theme) => void
+  theme: Theme
+  setThemeState: (theme: Theme) => void
 }

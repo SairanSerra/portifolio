@@ -1,2 +1,2 @@
-export { useThemeStore } from './module'
+export { useThemeStore, useMenuNavBarStore } from './module'
 export type * from './types'

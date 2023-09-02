@@ -11,6 +11,7 @@
     "react-hooks/rules-of-hooks": "off",
     "no-empty-interface": "off",
     "ban-types": "off",
-    "no-empty-function": "off"
+    "no-empty-function": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
   }
 }
