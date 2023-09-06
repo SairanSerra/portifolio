@@ -23,7 +23,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/store/*": ["./src/store/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/public/*": ["./public/*"]
 
     }
   },

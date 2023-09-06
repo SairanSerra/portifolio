@@ -1,4 +1,6 @@
 export { NavBar } from './Layout'
 export { Button } from './Button'
-export { TitleWithAboutMe } from './TitileTyping'
+export { AboutMe } from './AboutMe'
 export { SwitchTheme } from './Switch'
+export { Title } from './Title'
+export { Skills } from './Skills'

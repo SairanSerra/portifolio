@@ -1,11 +1,17 @@
 import React from 'react'
 import * as Styled from './styles'
 import { ButtonProps } from '../types'
+import { useThemeStore } from '@/store'
 
-export function Button({ type = 'button', children }: ButtonProps) {
+export function Button({
+  type = 'button',
+  autoChange = true,
+  children,
+}: ButtonProps) {
+  const { theme } = useThemeStore()
   return (
     <>
-      <Styled.Button type={type}>
+      <Styled.Button $autoChange={autoChange} $theme={theme} type={type}>
         <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-500 border-t-2 border-purple-200 group-hover:w-full ease"></span>
         <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-500 border-b-2 border-purple-200 group-hover:w-full ease"></span>
         <span className="absolute top-0 left-0 w-full h-0 transition-all duration-500 delay-200 bg-purple-200 group-hover:h-full ease"></span>

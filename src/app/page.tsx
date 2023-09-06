@@ -1,18 +1,22 @@
 'use client'
 import React from 'react'
-import { NavBar, TitleWithAboutMe } from '@/components'
+import { NavBar, AboutMe, Skills } from '@/components'
 import * as Styled from './styles'
 import { useDropdownNavBar } from '@/components/Layout/hooks'
 import { useThemeStore } from '@/store'
 
 export default function Home() {
-  const { menuOpen, ref } = useDropdownNavBar()
+  const { ref, setOpenMenu } = useDropdownNavBar()
   const { theme } = useThemeStore()
   return (
     <Styled.ContainerMaster $theme={theme} ref={ref}>
-      <NavBar />
-      <Styled.ContainerContent $openMenu={menuOpen}>
-        <TitleWithAboutMe />
+      <div className="fixed z-50 w-full">
+        <NavBar />
+      </div>
+
+      <Styled.ContainerContent onClick={() => setOpenMenu(false)}>
+        <AboutMe />
+        <Skills />
       </Styled.ContainerContent>
     </Styled.ContainerMaster>
   )

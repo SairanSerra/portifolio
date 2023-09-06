@@ -29,6 +29,5 @@ relative
 group
 text-lg
 cursor-pointer
-hidden
 lg:flex
 `

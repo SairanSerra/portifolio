@@ -9,7 +9,7 @@ export function DropDownNavBar() {
   const { menuOpen, setOpenMenu } = useMenuNavBarStore()
   return (
     <Styled.ContainerMaster onClick={() => setOpenMenu(!menuOpen)}>
-      <Button>
+      <Button autoChange={false}>
         <HiMenu size={20} />
       </Button>
       <Styled.ContainerItems $openMenu={menuOpen}>

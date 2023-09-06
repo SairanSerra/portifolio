@@ -3,7 +3,6 @@ import React from 'react'
 import * as Styled from './styles'
 import { DropDownNavBar } from '../DropdownNavbar'
 import { SwitchTheme } from '@/components'
-import { useThemeStore } from '@/store'
 import { useNavbar } from '../hooks'
 
 export function NavBar() {

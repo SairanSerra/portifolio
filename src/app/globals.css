@@ -17,6 +17,25 @@
 }
 
 body {
+  @layer base {
+    ::-webkit-scrollbar-thumb{
+        @apply bg-purple shadow-sm w-2
+        }
+        ::-webkit-scrollbar-thumb::horizontal {
+            @apply  bg-purple-200 hover:bg-white active:bg-white w-2 
+          }
+        ::-webkit-scrollbar{
+        @apply w-2 bg-purple
+           
+        }
+        ::-webkit-scrollbar-thumb{
+        @apply rounded-md bg-purple-200 hover:bg-white active:bg-white w-2 
+        }
+        input[type=number] {
+            -moz-appearance:textfield;
+        }
+    
+}
   color: rgb(var(--foreground-rgb));
 
 }

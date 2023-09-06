@@ -6,15 +6,13 @@ export const ContainerItems = tw.div<{ $openMenu: boolean }>`
 absolute 
 top-20 
 right-0 
-divide-y 
-divide-gray-100 
 rounded-b-sm
-shadow 
 w-full
 ease-in-out 
 duration-300
 bg-purple
-${({ $openMenu }) => ($openMenu ? 'block' : 'hidden')}
+overflow-hidden
+${({ $openMenu }) => ($openMenu ? 'h-[200px]' : 'h-0')}
 `
 
 export const ListItems = tw.div`
@@ -32,7 +30,6 @@ relative
 group
 text-lg
 cursor-pointer
-hidden
 lg:flex
 `
 
