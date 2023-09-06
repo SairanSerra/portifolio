@@ -1,1 +1,3 @@
-export const useSkills = () => {}
+export const useSkills = () => {
+  console.log('')
+}
