@@ -16,5 +16,5 @@ export const ContainerContent = tw.div`
 px-8
 flex 
 flex-col
-gap-24
+gap-40
 `

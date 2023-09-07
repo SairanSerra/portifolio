@@ -4,16 +4,18 @@ import type { Theme } from '@/@types'
 import Lottie from 'lottie-react'
 
 export const ContainerMaster = tw.div`
-flex
-justify-between
 items-center
+justify-between
 mt-44
-px-20
+block
+lg:flex
 `
 
 export const WrapperText = tw.div`
 flex
 flex-col
+items-center
+lg:items-start
 gap-5
 `
 

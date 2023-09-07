@@ -4,7 +4,6 @@ import * as Styled from './styles'
 import { useThemeStore } from '@/store'
 import { AnimatePresence, motion } from 'framer-motion'
 import ImageDeveloper from '@/public/image-developer.json'
-import Lottie from 'lottie-react'
 
 export function AboutMe() {
   const { theme } = useThemeStore()
@@ -13,8 +12,7 @@ export function AboutMe() {
       <motion.div
         transition={{ duration: 1, ease: 'linear', x: { duration: 1 } }}
         initial={{ x: -300, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
       >
         <Styled.ContainerMaster>
           <Styled.WrapperText>

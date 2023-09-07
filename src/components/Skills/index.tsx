@@ -1,35 +1,67 @@
 import React from 'react'
 import * as Styled from './styles'
 import { Button, Title } from '..'
-import { listStackFrontEnd, listStackBackEnd } from './object'
 import { Card } from './components'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { useSkills } from './hooks'
 
 export function Skills() {
-  const listelements = listStackBackEnd
+  const {
+    listSkill,
+    handleChangeTypeListToAll,
+    handleChangeTypeListToBackEnd,
+    handleChangeTypeListToFrontEnd,
+    skillAllSelected,
+    skillBackEndSelected,
+    skillFrontEndSelected,
+  } = useSkills()
+
   return (
-    <AnimatePresence presenceAffectsLayout>
-      <motion.div
-        layoutScroll
-        transition={{ duration: 1, ease: 'linear', x: { duration: 1 } }}
-        initial={{ x: -300, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: -300, opacity: 0 }}
-      >
-        <Styled.ContainerMaster>
-          <Title>Habilidades</Title>
-          <Styled.WrapperButton>
-            <Button>Todos</Button>
-            <Button>Front-End</Button>
-            <Button>Back-End</Button>
-          </Styled.WrapperButton>
-          <Styled.ContainerSkills>
-            {listelements.map(({ name, icon }, id) => (
-              <Card Icon={icon} skill={name} key={id} />
-            ))}
-          </Styled.ContainerSkills>
-        </Styled.ContainerMaster>
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      transition={{ duration: 1, ease: 'linear', x: { duration: 1 } }}
+      initial={{ x: -300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -300, opacity: 0 }}
+    >
+      <Styled.ContainerMaster>
+        <Title>Habilidades</Title>
+        <motion.div
+          transition={{ duration: 1, ease: 'linear', x: { duration: 1 } }}
+          initial={{ x: -300, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+        >
+          <Styled.WrapperContent>
+            <Styled.WrapperButtonMaster>
+              <Styled.WrapperButton>
+                <Styled.ButtonCustom
+                  selected={skillAllSelected}
+                  onClick={handleChangeTypeListToAll}
+                >
+                  Todas
+                </Styled.ButtonCustom>
+                <Styled.ButtonCustom
+                  selected={skillFrontEndSelected}
+                  onClick={handleChangeTypeListToFrontEnd}
+                >
+                  Front-End
+                </Styled.ButtonCustom>
+                <Styled.ButtonCustom
+                  selected={skillBackEndSelected}
+                  onClick={handleChangeTypeListToBackEnd}
+                >
+                  Back-End
+                </Styled.ButtonCustom>
+              </Styled.WrapperButton>
+            </Styled.WrapperButtonMaster>
+
+            <Styled.ContainerSkills>
+              {listSkill.map(({ name, icon }, id) => (
+                <Card Icon={icon} skill={name} key={id} />
+              ))}
+            </Styled.ContainerSkills>
+          </Styled.WrapperContent>
+        </motion.div>
+      </Styled.ContainerMaster>
+    </motion.div>
   )
 }
