@@ -20,7 +20,8 @@ gap-5
 `
 
 export const Title = tw(TypeAnimation)<{ $theme: Theme }>`
-text-2xl
+text-xl
+sm:text-2xl
 md:text-5xl
 ${({ $theme }) => ($theme === 'dark' ? 'text-white' : 'text-purple')}
 `

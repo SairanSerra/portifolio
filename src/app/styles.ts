@@ -18,3 +18,7 @@ flex
 flex-col
 gap-40
 `
+
+export const ContainerNavbar = tw.div`
+fixed z-50 w-full
+`

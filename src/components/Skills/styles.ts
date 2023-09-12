@@ -17,11 +17,13 @@ gap-x-10
 md:gap-x-4
 sm:grid-cols-3
 xl:grid-cols-5
+2xl:grid-cols-7
 xl:gap-x-10
 md:grid-cols-4
 px-10
 transition-all
 duration-500
+w-full
 `
 
 export const WrapperButton = tw.div`
