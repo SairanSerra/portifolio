@@ -3,7 +3,7 @@ version: "3.5"
 services:
   portifolio-sairan:
    container_name: portifolio-sairan
-  #  image: colocar image
+   image: sairan/portifolio:latest
    ports:
     - "3001:3001"
    restart: always
