@@ -1,34 +1,50 @@
+import { RiReactjsLine } from 'react-icons/ri'
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiReactquery,
+  SiRedux,
+  SiJest,
+  SiTypescript,
+  SiJavascript,
+} from 'react-icons/si'
+import { BsFillBootstrapFill } from 'react-icons/bs'
+
 export const listStackFrontEnd = [
   {
     name: 'React',
-    icon: '',
+    icon: RiReactjsLine,
   },
   {
     name: 'Next JS',
-    icon: '',
+    icon: SiNextdotjs,
   },
   {
     name: 'Bootstrap',
-    icon: '',
+    icon: BsFillBootstrapFill,
   },
   {
     name: 'Tailwind',
-    icon: '',
+    icon: SiTailwindcss,
   },
   {
     name: 'React Query',
-    icon: '',
+    icon: SiReactquery,
   },
   {
     name: 'Redux',
-    icon: '',
+    icon: SiRedux,
   },
   {
     name: 'Jest',
-    icon: '',
+    icon: SiJest,
   },
   {
     name: 'Typescript',
-    icon: '',
+    icon: SiTypescript,
+  },
+  {
+    name: 'Javascript',
+    icon: SiJavascript,
   },
 ]

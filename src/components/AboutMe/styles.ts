@@ -4,21 +4,24 @@ import type { Theme } from '@/@types'
 import Lottie from 'lottie-react'
 
 export const ContainerMaster = tw.div`
-flex
-justify-between
 items-center
+justify-between
 mt-44
-px-20
+block
+lg:flex
 `
 
 export const WrapperText = tw.div`
 flex
 flex-col
+items-center
+lg:items-start
 gap-5
 `
 
 export const Title = tw(TypeAnimation)<{ $theme: Theme }>`
-text-2xl
+text-xl
+sm:text-2xl
 md:text-5xl
 ${({ $theme }) => ($theme === 'dark' ? 'text-white' : 'text-purple')}
 `

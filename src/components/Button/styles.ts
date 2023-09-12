@@ -4,6 +4,7 @@ import tw from 'tailwind-styled-components'
 export const Button = tw.button<{
   $autoChange: boolean
   $theme: Theme
+  $selected: boolean
 }>`
 w-full
 py-2
@@ -18,10 +19,12 @@ rounded-lg
 shadow-inner 
 group
 flex
+bg-none
 justify-center
 ${({ $autoChange, $theme }) => {
   if ($autoChange) {
     return $theme === 'dark' ? 'text-gray-600 ' : 'text-purple'
   }
 }}
+${({ $selected }) => ($selected ? 'bg-purple text-white' : 'bg-none')}
 `

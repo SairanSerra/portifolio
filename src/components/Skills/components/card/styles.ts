@@ -10,13 +10,19 @@ hover:shadow-purple
 flex
 justify-center
 items-center
-w-[200px]
-h-[150px]
+w-[100px]
+sm:w-[150px]
+sm:h-[100px]
+lg:w-[200px]
+lg:h-[150px]
 transition-all
 duration-300
 `
 export const ContainerMaster = tw.div`
-h-[230px]
+h-[150px]
+sm:h-[150px]
+md:h-[150px]
+lg:h-[200px]
 w-full
 transition-all
 duration-300
@@ -25,7 +31,9 @@ duration-300
 export const WrapperText = tw.div<{ $showLegend: boolean }>`
 text-center
 bg-purple
-w-[200px]
+w-[100px]
+sm:w-[150px]
+lg:w-[200px]
 rounded-t-md
 transition-all
 duration-300

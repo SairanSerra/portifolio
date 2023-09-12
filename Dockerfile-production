@@ -1,0 +1,44 @@
+FROM node:16.14-alpine3.14 AS base
+
+FROM base AS deps
+
+RUN apk add --no-cache libc6-compat
+WORKDIR /app/portifolio-sairan
+
+COPY package*.json .
+RUN npm ci 
+
+
+FROM base AS builder
+WORKDIR /app/portifolio-sairan
+COPY --from=deps /app/portifolio-sairan/node_modules ./node_modules
+COPY . .
+
+ENV NEXT_TELEMETRY_DISABLED 1
+
+
+RUN npm run build && \
+    npm prune --production && \
+    npm cache clean --force && \
+    rm -rf .next/cache && \
+    rm -rf node_modules/.cache && \
+    find . -name "*.test.*" -delete
+
+
+FROM base AS runner 
+WORKDIR /app/portifolio-sairan
+
+ENV NODE_ENV production
+
+ENV NEXT_TELEMETRY_DISABLED 1
+
+COPY --from=builder /app/portifolio-sairan/public ./public
+COPY --from=builder  /app/portifolio-sairan/.next/standalone ./
+COPY --from=builder /app/portifolio-sairan/.env.production ./
+COPY --from=builder /app/portifolio-sairan/.next/static ./.next/static
+
+
+
+ENV PORT 3001
+
+CMD ["node", "server.js"]

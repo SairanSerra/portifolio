@@ -1,0 +1,15 @@
+version: "3.5"
+
+services: 
+  portifolio:
+   container_name: portifolio
+   build: 
+    context: .
+    dockerfile: Dockerfile.dev
+   restart: always
+   ports:
+    - 3000:3000
+   volumes:
+    - .:/app/portifolio
+    - /app/portifolio/node_modules
+    - /app/portifolio/.next

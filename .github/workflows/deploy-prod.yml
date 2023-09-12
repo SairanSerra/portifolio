@@ -1,0 +1,34 @@
+name: DEPLOY - PROD
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositorio
+        uses: actions/checkout@v1
+      - name: Criando env production
+        run: |
+          touch .env.production
+          echo "NEXT_PUBLIC_MODE=${{secrets.NEXT_PUBLIC_MODE_ENV}}" >> .env.production
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{secrets.DOCKER_HUB_USERNAME}}
+          password: ${{secrets.DOCKER_HUB_ACCESS_TOKEN}}
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v2.3.0
+        with:
+          context: .
+          file: Dockerfile-production
+          no-cache: true
+          push: true
+          github-token: ${{ secrets.GIT_ACCESS_TOKEN }}
+          tags: sairan/portifolio-front:latest
+        env:
+         webhook_url: ${{secrets.WEB_HOOK_DOCKER_URL}}
+         webhook_secret: "Y0uR5ecr3t"
+         verify_ssl: false
