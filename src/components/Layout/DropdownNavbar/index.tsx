@@ -16,6 +16,7 @@ export function DropDownNavBar() {
         <Styled.ListItems>
           {itemsNavbar.map((element) => (
             <Styled.Item
+              href={element.path}
               onClick={() => setOpenMenu(!menuOpen)}
               key={element.id}
             >

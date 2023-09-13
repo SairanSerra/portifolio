@@ -14,7 +14,7 @@ export function AboutMe() {
         initial={{ x: -300, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
       >
-        <Styled.ContainerMaster>
+        <Styled.ContainerMaster id="aboutme">
           <Styled.WrapperText>
             {theme === 'dark' && (
               <Styled.Title

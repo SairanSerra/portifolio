@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 export function Projects() {
   return (
-    <Styled.ContainerMaster>
+    <Styled.ContainerMaster id="projects">
       <Title>Projetos</Title>
       <motion.div
         transition={{ duration: 1, ease: 'linear', x: { duration: 1 } }}

@@ -17,7 +17,7 @@ export function Skills() {
   } = useSkills()
 
   return (
-    <Styled.ContainerMaster>
+    <Styled.ContainerMaster id="skills">
       <Title>Habilidades</Title>
       <motion.div
         transition={{ duration: 1, ease: 'linear', x: { duration: 1 } }}

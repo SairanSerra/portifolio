@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function Contact() {
   return (
-    <Styled.ContainerMaster>
+    <Styled.ContainerMaster id="contact">
       <Title>Contato</Title>
       <motion.div
         transition={{ duration: 1, ease: 'linear', x: { duration: 1 } }}
