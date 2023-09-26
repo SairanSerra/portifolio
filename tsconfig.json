@@ -22,6 +22,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@/src*": ["./src/*"],
       "@/store/*": ["./src/store/*"],
       "@/components/*": ["./src/components/*"],
       "@/public/*": ["./public/*"]
@@ -29,5 +30,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "jest.config.mjs"],
-  "exclude": ["node_modules", "./tests/*"]
+  "exclude": ["node_modules"]
 }

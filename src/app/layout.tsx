@@ -8,6 +8,9 @@ const inter = Rubik({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Sairan Serra dos Santos',
   description: 'Portifólio de um desenvolvedor full-stack',
+  icons: {
+    icon: '/icon-letter-s.png',
+  },
 }
 const { theme } = useThemeStore.getState()
 
