@@ -28,7 +28,10 @@ jobs:
           push: true
           github-token: ${{ secrets.GIT_ACCESS_TOKEN }}
           tags: sairan/portifolio-front:latest
+        
+      - name: Update image in stack
+        uses: distributhor/workflow-webhook@v2
         env:
-         webhook_url: ${{secrets.WEB_HOOK_DOCKER_URL}}
-         webhook_secret: "Y0uR5ecr3t"
-         verify_ssl: false
+          webhook_url: ${{secrets.WEB_HOOK_DOCKER_URL}}
+          webhook_secret: 'Y0uR5ecr3t'
+          verify_ssl: false

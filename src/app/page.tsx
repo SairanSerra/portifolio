@@ -11,6 +11,7 @@ import {
 import * as Styled from './styles'
 import { useDropdownNavBar } from '@/components/Layout/hooks'
 import { useThemeStore } from '@/store'
+import { BackgroundParticles } from '@/components/BackgroundParticles'
 
 export default function Home() {
   const { ref, setOpenMenu } = useDropdownNavBar()
@@ -20,6 +21,7 @@ export default function Home() {
       <Styled.ContainerNavbar className="">
         <NavBar />
       </Styled.ContainerNavbar>
+      <BackgroundParticles />
       <Styled.ContainerContent onClick={() => setOpenMenu(false)}>
         <AboutMe />
         <Skills />

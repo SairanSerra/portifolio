@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const ContainerMaster = tw.div`
+export const ContainerMaster = tw.a`
 transition-transform
 duration-200
 md:hover:scale-105

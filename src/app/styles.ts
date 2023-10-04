@@ -5,7 +5,7 @@ export const ContainerMaster = tw.div<{ $theme: Theme }>`
 w-full
 h-full
 transition-all 
-duration-700
+duration-1000
 flex
 flex-col
 gap-24
@@ -17,8 +17,9 @@ px-8
 flex 
 flex-col
 gap-40
+z-[99]
 `
 
 export const ContainerNavbar = tw.div`
-fixed z-50 w-full
+fixed z-[9999] w-full
 `

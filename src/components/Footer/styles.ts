@@ -9,6 +9,7 @@ flex
 justify-center
 p-5
 items-center
+z-[999]
 `
 
 export const WrapperText = tw.div`

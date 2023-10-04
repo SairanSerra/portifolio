@@ -9,6 +9,7 @@ flex
 justify-between
 items-center
 lg:px-24
+w-full
 `
 
 export const ContainerText = tw.div``
