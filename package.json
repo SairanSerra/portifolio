@@ -37,7 +37,7 @@
     "@rocketseat/eslint-config": "^2.1.0",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
-    "@types/jest": "^29.5.4",
+    "@types/jest": "^29.5.6",
     "@types/js-cookie": "^3.0.3",
     "@types/testing-library__react": "^10.2.0",
     "eslint": "^8.47.0",
